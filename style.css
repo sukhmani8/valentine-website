@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e0, #fff0f6);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* HEADINGS */
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #c9184a;
+  font-size: 2.2rem;
+  animation: fadeIn 1.5s ease;
+}
+
+/* CONTAINER */
+.container {
+  padding: 20px;
+}
+
+/* MAIN PHOTO */
+.main-photo {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 25px;
+  margin: 20px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation: popIn 1.2s ease;
+}
+
+/* BUTTONS */
+.buttons {
+  position: relative;
+  height: 160px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 15px 32px;
+  font-size: 18px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+#yesBtn {
+  background: #ff4d6d;
+  color: white;
+}
+
+#noBtn {
+  background: #adb5bd;
+  position: absolute;
+}
+
+/* YES PAGE */
+.yes-text {
+  margin-top: 25px;
+  font-size: 2rem;
+  color: #d6336c;
+  animation: fadeIn 1.5s ease;
+}
+
+/* PHOTO GRID */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: popIn 1s ease;
+}
+
+/* FLOATING HEARTS */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 22px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.7;
+}
+
+/* ANIMATIONS */
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
